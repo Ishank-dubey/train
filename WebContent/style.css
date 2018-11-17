@@ -1,0 +1,28 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+}
+
+.content {
+  height:150px;
+  width: 100%;
+  background-color:yellow;
+  padding:1px;
+}
+.module__top {
+  position:relative;
+  margin-top: 50px;
+  background-color: red;
+  height:50px;
+}
+
+.module__bottom {
+  margin-top: 50px;
+  background-color: blue;
+}
