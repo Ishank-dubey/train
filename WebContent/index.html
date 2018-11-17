@@ -7,13 +7,22 @@
 <body>
 <script>
 (function(){
-	var input;
-	if (input === undefined) {
-	  console.log('undefined');
-	  console.log('2'*'4');
-	} else {
-	  console.log('not undefined');
-	}
+	function Employee() {
+		  this.dept = 'general';    // Note that this.name (a local 
+		  //variable) does not appear here
+		  this.name = '1';
+		}
+		//Employee.prototype.name = '';    // A single copy
+
+		function WorkerBee() {
+		  Employee.call(this);// adds the properties to the WorkerBee
+		  this.projects = [];
+		}
+		  WorkerBee.prototype = Object.create(Employee.prototype);
+		  WorkerBee.prototype.constructor = WorkerBee;
+
+		var amy = new WorkerBee();
+		console.log(amy);
 })()
 </script>
 </body>
